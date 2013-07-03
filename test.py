@@ -1,13 +1,13 @@
-
 import cython
 
 if not cython.compiled:
     print "I'm interpreted"
-    exec('from math import sin,cos, log')
+    exec('from math import sin, cos, log')
 
 from math import log as py_log
 
 def f(r):
+    """ Using the python version when interpreted, the C version when compiled """
     s = log(r)
     return s
     
